@@ -1,8 +1,7 @@
-package com.exosoft.estoque_api.controller;
+package com.exosoft.estoque_api.usuario.adapter.in.web;
 
-import com.exosoft.estoque_api.domain.entity.User;
-import com.exosoft.estoque_api.dto.UserRequest;
-import com.exosoft.estoque_api.service.UserService;
+import com.exosoft.estoque_api.usuario.domain.model.User;
+import com.exosoft.estoque_api.usuario.application.port.service.UserService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -22,7 +21,7 @@ public class UserController {
     }
 
     @PostMapping
-    public ResponseEntity<com.exosoft.estoque_api.domain.entity.User> create(@Valid @RequestBody UserRequest req) {
+    public ResponseEntity<User> create(@Valid @RequestBody UserRequest req) {
         return ResponseEntity.status(HttpStatus.CREATED).body(service.create(req));
     }
 
@@ -38,7 +37,7 @@ public class UserController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<com.exosoft.estoque_api.domain.entity.User> find(@PathVariable Long id) {
+    public ResponseEntity<User> find(@PathVariable Long id) {
         return ResponseEntity.ok(service.find(id));
     }
 }

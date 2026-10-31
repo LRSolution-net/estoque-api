@@ -1,7 +1,7 @@
-package com.exosoft.estoque_api.controller.advice;
+package com.exosoft.estoque_api.shared.adapter.in.web;
 
-import com.exosoft.estoque_api.exception.BusinessException;
-import com.exosoft.estoque_api.exception.NotFoundException;
+import com.exosoft.estoque_api.shared.domain.exception.BusinessException;
+import com.exosoft.estoque_api.shared.domain.exception.NotFoundException;
 import org.springframework.http.*;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;

@@ -1,4 +1,4 @@
-package com.exosoft.estoque_api.domain.entity;
+package com.exosoft.estoque_api.usuario.domain.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
